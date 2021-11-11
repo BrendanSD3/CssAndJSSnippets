@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+ 
+<head>
+<meta charset="utf-8">
+<title>Bouncing Clouds</title>
+
+ 
+<style>
+    h1{
+        text-align:center;
+    }
+#mainContent {
+    background-color: #A2BFCE;
+    border-radius: 4px;
+    padding: 10px;
+    width: 600px;
+    height: 300px;
+   
+}
+.cloud {
+    position: absolute;
+}
+#bigcloud {
+    animation:bounce 2s infinite;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+#bigcloud:hover{
+    animation-play-state:paused;
+    
+}
+#smallcloud {
+    animation: bounce 4s 4s, bounce 5s infinite, bounce 2s infinite;
+    margin-top: 65px;
+    margin-left: 200px;
+}
+@keyframes bounce {
+    0% {
+        transform: translate3d(50px, 40px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translate3d(50px, 50px, 0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate3d(50px, 40px, 0px);
+    }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+ 
+<body class="container">
+    <h1 class="animate__animated animate__rubberBand">An animated element</h1>
+    <div id="mainContent">
+        <img id="bigcloud" alt="#" class="cloud" height="154" src="https://www.kirupa.com/images/bigCloud.png" width="238">
+        <img id="smallcloud" alt="#" class="cloud" height="103" src="https://www.kirupa.com/images/smallCloud.png" width="158">
+    
+        
+    </div>
+</body>
+ 
+</html>
